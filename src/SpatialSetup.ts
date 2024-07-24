@@ -2,6 +2,8 @@ console.log("Configuring Spatial Navigation");
 
 import { Platform } from 'react-native';
 import { BackwardsCompatibleKeyMap, init, setKeyMap } from '@noriginmedia/norigin-spatial-navigation';
+import config from "../config";
+
 
 const KEY_MAPS: { [key: string]: BackwardsCompatibleKeyMap } = {
     ArrowKeys: {
@@ -28,9 +30,9 @@ const KEY_MAPS: { [key: string]: BackwardsCompatibleKeyMap } = {
 };
 
 init({
-    debug: false,
+    debug: config.debug,
     nativeMode: Platform.OS !== 'web',
-    visualDebug: true,
+    visualDebug: config.debug,
     shouldUseNativeEvents: Platform.OS !== 'web',
 });
 
