@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "~/*": [
+        ".//*"
+      ],
+      "~src/*": [
+        "./src/*"
+      ],
+      "~assets/*": [
+        "./src/assets/*"
+      ]
+    },
+    "target": "es6"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "extends": "expo/tsconfig.base"
+}
